@@ -30,11 +30,21 @@ def equal():
         display.set("ERROR ...")
         expression = ""
 
+
+def butao(txt, bg, row, column, cmd = "command = lambda: press()"):
+    global janela
+    butao = Button(janela, text = txt, fg = "white", bg = bg, command = cmd, height = 2,
+                   width = 6)
+    butao.grid(row = row, column = column)
+
 # Making Buttons #
 # Buttons - Numbers #
-b_um = Button(janela, text = " 1 ", fg = "white", bg = "black", command = lambda: press(1),
-              height = 2, width = 6)
-b_um.grid(row = 1, column = 0)
+
+butao(" 1 ", "black", 1, 0)
+
+#b_um = Button(janela, text = " 1 ", fg = "white", bg = "black", command = lambda: press(1),
+#              height = 2, width = 6)
+#b_um.grid(row = 1, column = 0)
 
 b_dois = Button(janela, text = " 2 ", fg = "white", bg = "black", command = lambda: press(2),
               height = 2, width = 6)
